@@ -1,0 +1,14 @@
+# Reference here: https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
+
+LineLength:
+  Enabled: false
+
+MethodLength:
+  Description: 'Try to avoid methods longer than 25 lines of code.'
+  Enabled: true
+  Max: 25
+
+# Prefer single-quotes
+
+Encoding:
+  Enabled: false

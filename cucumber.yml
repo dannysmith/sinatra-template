@@ -1,0 +1,4 @@
+default: -f pretty -t ~@manual -t ~@wip -t ~@not_started -t ~@failing <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
+all: -f pretty <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
+complete_no_failing: -f pretty ru-t ~@failing -t ~@wip -t ~@not_started <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
+failing: -f pretty -t @failing -t ~@wip -t ~@not_started <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
