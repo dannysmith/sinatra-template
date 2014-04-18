@@ -7,6 +7,10 @@ javascript_compressor: uglifier
 javascripts:
   js/main.min:
     - javascripts/*.js
+  js/vendor/jquery.min:
+    - bower_components/jquery/dist/jquery.js
+  js/vendor/modenizr.min:
+    - bower_components/modernizr/modernizr.js
 
 stylesheets:
   css/main.min:
