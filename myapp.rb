@@ -1,5 +1,6 @@
 # MyApp main Application class.
 class MyApp < Sinatra::Base
+  use Rack::MethodOverride ##<-- Required for put delete etc
   helpers Sinatra::ContentFor
 
 
