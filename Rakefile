@@ -42,8 +42,8 @@ end
 
 task :update do
   puts "Updating Project..."
-  %x{bundle update}
-  %x{bundle exec bourbon update --path scss}
-  %x{bower update}
-  %x{cd scss; bundle exec neat update; bundle exec bitters update; cd ..}
+  puts `bundle update`
+  puts `bundle exec bourbon update --path scss`
+  puts `bower update`
+  puts `cd scss; pwd; bundle exec neat update; bundle exec bitters update; cd ..`
 end
