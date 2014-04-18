@@ -44,5 +44,6 @@ task :update do
   puts "Updating Project..."
   %x{bundle update}
   %x{bundle exec bourbon update --path scss}
-  %x{cd scss; bundle exec neat update; bundle exec bitters update; curl -o normalize.css https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css; cd ..}
+  %x{bower update}
+  %x{cd scss; bundle exec neat update; bundle exec bitters update; cd ..}
 end
